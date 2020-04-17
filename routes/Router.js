@@ -49,7 +49,7 @@ router.get('/:id', (req, res) => {
 				res.status(404).json({
 					message: 'The post with the specified ID does not exist.',
 				});
-			} //end if/else
+			}
 		})
 		.catch((error) => {
 			console.log(error);

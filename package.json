@@ -1,28 +1,29 @@
 {
-  "name": "node-api2-project",
-  "version": "0.0.1",
-  "description": "Project for Node API 2 Module",
-  "private": true,
-  "main": "index.js",
-  "scripts": {
-    "server": "nodemon index.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
-  },
-  "dependencies": {
-    "axios": "^0.19.2",
-    "concurrently": "^5.1.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "knex": "^0.20.11",
-    "react-redux": "^7.2.0",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0",
-    "sqlite3": "^4.1.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
-  },
-  "proxy": "http://localhost:4000"
+	"name": "node-api2-project",
+	"version": "0.0.1",
+	"description": "Project for Node API 2 Module",
+	"private": true,
+	"main": "index.js",
+	"scripts": {
+		"server": "nodemon --require dotenv/config index.js",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"dependencies": {
+		"axios": "^0.19.2",
+		"concurrently": "^5.1.0",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"knex": "^0.20.11",
+		"react-redux": "^7.2.0",
+		"redux": "^4.0.5",
+		"redux-devtools-extension": "^2.13.8",
+		"redux-thunk": "^2.3.0",
+		"sqlite3": "^4.1.1"
+	},
+	"devDependencies": {
+		"dotenv": "^8.2.0",
+		"nodemon": "^2.0.2"
+	},
+	"proxy": "http://localhost:4000"
 }

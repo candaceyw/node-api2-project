@@ -16,7 +16,7 @@ export const getPosts = () => (dispatch) => {
 
 	// GET posts
 	return axios
-		.get(`http://localhost:4000/api/posts`)
+		.get(`http://localhost:4400/api/posts`)
 		.then((res) => {
 			console.log('get all posts action', res.data);
 			dispatch({ type: POST_SUCCESS, payload: res.data });
@@ -35,7 +35,7 @@ export const getPosts = () => (dispatch) => {
 export const addPost = (posts) => (dispatch) => {
 	dispatch({ type: POST_START });
 	axios
-		.post(`http://localhost:4000/api/posts`, posts)
+		.post(`http://localhost:4400/api/posts`, posts)
 		.then((res) => {
 			console.log('add POST', res);
 			dispatch({ type: ADD_POST_SUCCESS, payload: res.data });
@@ -51,7 +51,7 @@ export const deletePost = (id) => (dispatch) => {
 	dispatch({ type: DELETE_POST });
 
 	axios
-		.delete(`http://localhost:4000/api/posts/${id}`)
+		.delete(`http://localhost:4400/api/posts/${id}`)
 		.then((res) => {
 			console.log('delete post:', res.data);
 			dispatch({ type: DELETE_POST, payload: id });

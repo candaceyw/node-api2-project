@@ -9,7 +9,6 @@ const AddPostModal = ({ addPost }) => {
 	const [title, setTitle] = useState('');
 	const [contents, setContents] = useState('');
 	const [created, setCreated] = useState('');
-	const [updated, setUpdated] = useState('');
 
 	const onSubmit = () => {
 		if (title === '' || contents === '') {
@@ -18,8 +17,6 @@ const AddPostModal = ({ addPost }) => {
 			const newPost = {
 				title,
 				contents,
-				created,
-				updated,
 			};
 			console.log(newPost);
 			addPost(newPost);
@@ -61,12 +58,6 @@ const AddPostModal = ({ addPost }) => {
 							Contents
 						</label>
 					</div>
-				</div>
-				<div className='row'>
-					Created at: <Moment value={created}>{dateToFormat}</Moment>
-				</div>
-				<div className='row'>
-					Updated at: <Moment value={updated}>{dateToFormat}</Moment>
 				</div>
 			</div>
 			<div className='modal-footer'>
