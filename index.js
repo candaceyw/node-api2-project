@@ -12,7 +12,7 @@ server.use('/api/posts', postRouter);
 
 server.get('/', (req, res) => {
 	res.send(`
-  <h1>Welcome to our Posts-Data Server</h1>
+  <h1>Welcome to our Posts-Data Server, ${process.env.AUTHKEY}</h1>
   `);
 });
 
